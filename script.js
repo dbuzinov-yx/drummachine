@@ -57,7 +57,7 @@ var tom = [];
 for (var i = 1; i <= bars; i++) {
     kick[i] = new Instrument('.kicks .kick:nth-child(' + i + ')','samples/kick-classic.wav');
     hithat[i] = new Instrument('.hithats .hithat:nth-child(' + i + ')','samples/hihat-electro.wav');
-    tom[i] = new Instrument('.toms .hithat:nth-child(' + i + ')','samples/tom-acoustic01.wav');
+    tom[i] = new Instrument('.toms .tom:nth-child(' + i + ')','samples/tom-acoustic01.wav');
 }
 var melody = new Instrument('.melody .bar','looperman-l-1951920-0106474-tofcix-piano-1.wav');
 

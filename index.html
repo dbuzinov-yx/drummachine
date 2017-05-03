@@ -3,41 +3,69 @@
         <title>Drum Machine</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script>
         <style>
+            #play {
+                background-color: green;
+                padding: 10px;
+                border: 1px solid green;
+            }
+
+            #stop {
+                background-color: red;
+                padding: 10px;
+                border: 1px solid red;
+                
+            }
+
+            body {
+                background-image: url(background.jpg);
+            }
             .bar {
                 width:100px;
                 height: 100px;
                 float: left;
                 margin: 10px;
-                border: 5px solid transparent;
+                box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.75);
                 position: relative;
                 border-radius: 5px; 
             }
             
             .kick.play {
-                border: 2px solid #2b65ed;
                 background-color: royalblue;
                 background: linear-gradient(to bottom, #e4ecfc 0%,#bfd1f9 50%,#9fbaef 51%,#2b65ed 100%); 
             }
 
             .kick[data-active] {
-                border: 5px solid olivedrab;
+                /*border: 5px solid olivedrab;*/
+                background: linear-gradient(to bottom, #9088e8 0%,#7970e0 100%);
             }
 
             .kick {
-                background-color: #9fd8ef;
-                background: linear-gradient(to bottom, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);
+                background-color: #88bfe8;
+                background: linear-gradient(to bottom, #88bfe8 0%,#70b0e0 100%);
             }
 
             .hithat {
-                background-color: blue;
+                background-color: #a9db80;
+                background: linear-gradient(to bottom, #a9db80 0%,#96c56f 100%);
             }
 
             .hithat[data-active] {
-                border: 5px solid orangered;
+                /*border: 5px solid orangered;*/
+                background: linear-gradient(to bottom, #c8db81 0%,#b2c56f 100%);
             }
 
-            .hithat.play {
-                border: 5px solid greenyellow;
+            .tom {
+                background-color: #db818d;
+                background: linear-gradient(to bottom, #db818d 0%,#c56f7a 100%);
+            }
+
+            .tom[data-active] {
+                /*border: 5px solid orangered;*/
+                background: linear-gradient(to bottom, #db9a81 0%,#c5876f 100%);
+            }
+
+            .tom.play {
+                /*border: 5px solid greenyellow;*/
                 background-color: orange; 
             }
 
@@ -47,7 +75,7 @@
             }
 
             .melody .bar[data-active] {
-                border: 5px solid orangered;
+                /*border: 5px solid orangered;*/
                 background-color: orange; 
             }
 
@@ -97,14 +125,14 @@
         </div>
         <div style='clear:both' />
         <div class = "toms">
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
-            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
+            <div class="bar tom"><div class="indicator"></div></div>
         
         </div>
         <div style='clear:both' />
