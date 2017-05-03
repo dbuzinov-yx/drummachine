@@ -29,6 +29,7 @@ button {
 
 body {
     background-image: url(background.jpg);
+    background-size: cover;
 }
 .bar:hover {
     cursor: pointer;
