@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <title>Drum Machine</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script>
+        <style>
+            .bar {
+                width:100px;
+                height: 100px;
+                float: left;
+                margin: 10px;
+                border: 5px solid transparent;
+                position: relative;
+                border-radius: 5px; 
+            }
+            
+            .kick.play {
+                border: 2px solid #2b65ed;
+                background-color: royalblue;
+                background: linear-gradient(to bottom, #e4ecfc 0%,#bfd1f9 50%,#9fbaef 51%,#2b65ed 100%); 
+            }
+
+            .kick[data-active] {
+                border: 5px solid olivedrab;
+            }
+
+            .kick {
+                background-color: #9fd8ef;
+                background: linear-gradient(to bottom, #e4f5fc 0%,#bfe8f9 50%,#9fd8ef 51%,#2ab0ed 100%);
+            }
+
+            .hithat {
+                background-color: blue;
+            }
+
+            .hithat[data-active] {
+                border: 5px solid orangered;
+            }
+
+            .hithat.play {
+                border: 5px solid greenyellow;
+                background-color: orange; 
+            }
+
+            .melody .bar {
+                background-color: blue;
+                /*width:1010px;*/
+            }
+
+            .melody .bar[data-active] {
+                border: 5px solid orangered;
+                background-color: orange; 
+            }
+
+            [data-active] .indicator {
+                opacity: .4;
+            }
+            .play .indicator {
+                opacity: .2;
+            }
+
+            .indicator {
+                /*position: absolute;*/
+                bottom: 0;
+                height: 10px;
+                width: 80%;
+                border-radius: 5px;
+                content: "";
+                opacity: .7;
+                background-color: black;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="play">Play</button> <button id="stop">Stop</button>
+        <div class = "kicks">
+            <div class="bar kick"><div class="indicator"></div></div>
+            <div class="bar kick" data-active><div class="indicator"></div></div>
+            <div class="bar kick"><div class="indicator"></div></div>
+            <div class="bar kick" data-active><div class="indicator"></div></div>
+            <div class="bar kick"><div class="indicator"></div></div>
+            <div class="bar kick" data-active><div class="indicator"></div></div>
+            <div class="bar kick"><div class="indicator"></div></div>
+            <div class="bar kick" data-active><div class="indicator"></div></div>
+        </div>
+        <div style='clear:both' />
+        <div class = "hithats">
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+        </div>
+        <div style='clear:both' />
+        <div class = "toms">
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+            <div class="bar hithat"><div class="indicator"></div></div>
+        
+        </div>
+        <div style='clear:both' />
+        <div class = "melody">
+            <div class="bar">x32</div>
+        </div>
+        <div style='clear:both' />
+        <script src="script.js"></script>
+    </body>
+</html>
