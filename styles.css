@@ -1,0 +1,66 @@
+
+.bar {
+    width:100px;
+    height: 100px;
+    float: left;
+    margin: 10px;
+    position: relative;
+}
+
+.kick.play {
+    background-color: royalblue;
+}
+
+.kick[data-active] {
+    /*border: 5px solid olivedrab;*/
+    background: #3f30e0;
+}
+
+.kick {
+    background-color: #88bfe8;
+}
+
+.hithat {
+    background-color: #a9db80;
+}
+
+.hithat[data-active] {
+    /*border: 5px solid orangered;*/
+    background: #ff8f3f;
+}
+
+.tom {
+    background-color: #db818d;
+}
+
+.tom[data-active] {
+    /*border: 5px solid orangered;*/
+    background: #e20d5c;
+}
+
+.tom.play {
+    /*border: 5px solid greenyellow;*/
+    background-color: orange; 
+}
+
+.melody .bar {
+    background-color: blue;
+    /*width:1010px;*/
+}
+
+.melody .bar[data-active] {
+    /*border: 5px solid orangered;*/
+    background-color: orange; 
+}
+
+.indicator {
+    /*position: absolute;*/
+    height: 10px;
+    content: "";
+    background-color: black;
+    margin: 0 auto;
+}
+
+.row::after {
+    clear: both;
+}
